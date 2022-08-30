@@ -1,0 +1,17 @@
+{% extends './layout.html' %}
+
+{% block title %}{{ data.title }}{% endblock %}
+
+{%block body %}
+<h1>Flask</h1>
+<p>{{data.welcome}}</p>
+  {% if data.courses_number > 0 %}
+  <ul>
+    {% for item in data.courses %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+<p>There are no courses...</p>
+{% endif %}
+{% endblock %}
